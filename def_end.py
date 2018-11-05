@@ -1,4 +1,5 @@
 #warning this code is made by beginners and any small changes will result in poor execution/ multiple errors
+print("Over the cerulean sea, you and your mate are setting asail, trying to escape from the grasp of the British Navy ship, under her Royal Majesty order, Queen Petunia. Ain't nothing more sinner-est than stealing from Petunia's booty locked under the so-called secured bank in London, England.Titled in bold on the front cover of News Straight Times, your crew the Bootleg has once strike again being featured in the monthly newspaper spread more famous than Queen Petunia's fancy wardrobe show.")
 import random
 
 def display(): #prints row and column numbers
@@ -72,7 +73,7 @@ def board(ship,prob):
             for row in displayBoard:
                 print("".join(row), countRow)
                 countRow += 1
-            print ("You've sunk my battleship!")
+            print ("Aye! Aye! Well done matey")
             attempts = booms
             booms = 16
         else:
@@ -84,24 +85,24 @@ def board(ship,prob):
             try:
                 userRow, userCol = map(int, input("Enter row and col: ").split())              
                 if userRow < 1 or userRow > 20 or userCol < 1 or userCol > 60:
-                    print ("Sorry, this ocean isn't that big.")
+                    print ("Mate ye can't reach nirvana can ye. *crew members stared at yer bewildered by the epic miss*")
                     continue
             except ValueError:
-                print("Sorry, I don't understand that.")
+                print("Type in the right column and row, mate. Savy?")
                 continue
             else:
                 booms += 1
                 bombed = board[userRow-1][userCol-1]
                 if ships == 80:
                     if bombed == 5:
-                        print ("You've already bombed that ship.")
+                        print ("Are ye trying to venge the spirit! Ye already bombed the ship down")
                     else:
                         if bombed == 6:
-                            print ("You've already know there isn't a ship there.")
+                            print ("Shiver me timbers. Yer must be getting old.You already know there is no ship!")
                         else:
                             if bombed >= 1 and bombed <= 4:
                                 shipCounter += 1
-                                print ("You've sunk my battleship!")
+                                print ("Aye! Aye! Well done matey")
                                 shipIndex = []
                                 for n, i in enumerate(board[userRow-1]):
                                     if i == bombed:
@@ -111,20 +112,20 @@ def board(ship,prob):
                                             displayBoard[userRow-1][n] = "O"
 
                             else:
-                                print ("You missed!")
+                                print ("Mate are ye ok? Ye have missed the ship. Blimey!")
                                 board[userRow-1][userCol-1] = 6
                                 displayBoard[userRow-1][userCol-1] = " "
                                 
                 elif ships == 50:
                     if bombed == 4:
-                        print ("You've already bombed that ship.")
+                        print ("Are ye trying to venge the spirit! Ye already bombed the ship down")
                     else:
                         if bombed == 5:
-                            print ("You've already know there isn't a ship there.")
+                            print ("Shiver me timbers. Yer must be getting old.You already know there is no ship!")
                         else:
                             if bombed >= 1 and bombed <= 3:
                                 shipCounter += 1
-                                print ("You've sunk my battleship!")
+                                print ("Aye! Aye! Well done matey")
                                 shipIndex = []
                                 for n, i in enumerate(board[userRow-1]):
                                     if i == bombed:
@@ -133,20 +134,20 @@ def board(ship,prob):
                                         for i in shipIndex:
                                             displayBoard[userRow-1][n] = "O"
                             else:
-                                print ("You missed!")
+                                print ("Mate are ye ok? Ye have missed the ship. Blimey!")
                                 board[userRow-1][userCol-1] = 6
                                 displayBoard[userRow-1][userCol-1] = " "
                                 
                 elif ships == 20:
                     if board[userRow-1][userCol-1] == 2: 
-                        print ("You've already bombed that ship.")
+                        print ("Are ye trying to venge the spirit! Ye already bombed the ship down")
                     else:
                         if board[userRow-1][userCol-1] == 3:
-                            print ("You already know there isn't a ship there.")
+                            print ("Shiver me timbers. Yer must be getting old.You already know there is no ship!")
                         else:
                             if board[userRow-1][userCol-1] == 1: #if position chosen == 1 in board
                                 shipCounter += 1
-                                print ("You've sunk my battleship!")
+                                print ("Aye! Aye! Well done matey")
                                 shipIndex = [] #initialize index list to use for display board
                                 for n, i in enumerate(board[userRow-1]): #for the row specificed by user in board list
                                         if i == 1:
@@ -156,18 +157,18 @@ def board(ship,prob):
                                                 displayBoard[userRow-1][n] = "O"
                         
                             else:
-                                print ("You missed!")
+                                print ("Mate are ye ok? Ye have missed the ship. Blimey!")
                                 board[userRow-1][userCol-1] = 6
                                 displayBoard[userRow-1][userCol-1] = " "
 
     if attempts >= 13 and attempts <= 15:
-        print ("You are a novice.")
+        print ("You are a novice. Capitan LEVEL")
     elif attempts >=10 and attempts <= 12:
-        print ("Not bad.")
+        print ("Not bad. QuarterMaster LEVEL")
     elif attempts < 10:
-        print ("You have the talent!")
+        print ("You have the talent! FirstMate LEVEL")
     else:
-        print ("You've no luck today, try again.")
+        print ("You've no luck today, try again. CabinBoy LEVEL")
 
     userscore = (attempts)
     print("Your score is",userscore)
@@ -189,16 +190,16 @@ def board(ship,prob):
     #To check replace highscore or add highscore
     if len(scorelist)==10 :
         if userscore<(scorelist[-1][0]):
-            print("Congratulations! You beat the highscore! :)")
-            username=(input("Please enter your name: ")+"\n")
+            print("Congratulations! Ye beat the highscore! :)")
+            username=(input("Please enter ye name mate: ")+"\n")
             scorelist[-1]=[userscore,username]
             list.sort(scorelist)
         else:
             print("Try harder next time. :(")
                    
     else:
-        print("Congratulation! You beat the highscore! :)")
-        username=(input("Please enter your name: ")+"\n")
+        print("Congratulation! Ye beat the highscore! :)")
+        username=(input("Please enter ye name: ")+"\n")
         scorelist.append([userscore,username])
         list.sort(scorelist)
     
