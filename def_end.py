@@ -85,7 +85,7 @@ def board(ship,prob):
                 print("".join(row), countRow)
                 countRow += 1
             try:
-                userRow, userCol = map(int, input("Enter row and col: ").split())              
+                userRow, userCol = map(int, input("Fire in the hole! (enter row and column): ").split())              
                 if userRow < 1 or userRow > 20 or userCol < 1 or userCol > 60:
                     print ("Mate ye can't reach nirvana can ye. *crew members stared at yer bewildered by the epic miss*")
                     continue
