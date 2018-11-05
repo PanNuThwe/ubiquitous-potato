@@ -1,6 +1,7 @@
 #warning this code is made by beginners and any small changes will result in poor execution/ multiple errors
-print("Over the cerulean sea, you and your mate are setting asail, trying to escape from the grasp of the British Navy ship, under her Royal Majesty order, Queen Petunia. Ain't nothing more sinner-est than stealing from Petunia's booty locked under the so-called secured bank in London, England.")
-print("Titled in bold on the front cover of News Straight Times, your crew the Bootleg has once strike again being featured in the monthly newspaper spread more famous than Queen Petunia's fancy wardrobe show.")
+print('''Over the cerulean sea, you and your mate are setting asail, trying to escape from the grasp of the British Navy ship, under her Royal Majesty order, Queen Petunia.
+Ain't nothing more sinner-est than stealing from Petunia's booty locked under the so-called secured bank in London.Titled in bold on the front cover of News Straight Times,
+your crew the Bootleg has once strike again being featured in the monthly newspaper spread more famous than Queen Petunia's fancy wardrobe show.''')
 
 import random
 
@@ -65,6 +66,12 @@ def board(ship,prob):
 
     for i in range(20):
         displayBoard.append(["#"]*60)
+        
+    print() 
+    print('''"Try not to miss the battleship or you and your mates will be inmates ahaha get it.
+            *wheezes* I mean in jail together forever", the parrot chirped in.
+          ''')
+    print()    
 
     booms = 1
     shipCounter = 0
